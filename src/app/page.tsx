@@ -15,7 +15,6 @@ import {
 } from '@/components';
 import { useWidth78 } from '@/hooks/useWidth78';
 import { useIsDesktop } from '@/hooks/useIsDesktop';
-import Script from 'next/script';
 
 export default function Page() {
   const [progress, setProgress] = useState<number>(0);
