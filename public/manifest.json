@@ -1,6 +1,6 @@
 {
-  "name": "Jaidete",
-  "short_name": "Jaidete",
+  "name": "fiap-landing-page",
+  "short_name": "FIAP",
   "description": "Landing Page Institucional",
   "start_url": "/",
   "display": "standalone",
