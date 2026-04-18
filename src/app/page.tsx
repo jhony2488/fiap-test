@@ -63,10 +63,6 @@ export default function Page() {
           <ArrowUp size={isLongDesktop ? 76 : 24} color="#fff" />
         </Link>
       )}
-       <Script
-          src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default,Promise,fetch,Array.prototype.includes,Array.prototype.find,Array.from,Object.assign,URL,URLSearchParams,Element.prototype.closest,IntersectionObserver,ResizeObserver"
-          strategy="beforeInteractive"
-        />
     </>
   );
 }
