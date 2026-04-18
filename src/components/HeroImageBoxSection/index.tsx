@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./heroImageBoxSection.scss";
 import ImageNext from 'next/image';
-export function HeroImageBoxSection({ width78Porcent, imageRef }: { width78Porcent: number, imageRef: React.RefObject<HTMLDivElement | null> }) {
+export function HeroImageBoxSection({ width78Porcent }: { width78Porcent: number }) {
 
     const containerRef = useRef<HTMLDivElement | null>(null);
     const [visible, setVisible] = useState<boolean>(false);
@@ -44,8 +44,8 @@ export function HeroImageBoxSection({ width78Porcent, imageRef }: { width78Porce
         return () => io.disconnect();
     }, []);
     return (
-        <section className="hero-image-box" aria-hidden>
-            <div className='hero-image-box_text-animation-1'>
+        <section className="hero-image-box"  aria-label="Apresentação visual e animações da FIAP">
+            <div className='hero-image-box_text-animation-1' aria-hidden >
                 <div className="marquee-wrapper marquee-wrapper--ltr">
                     <div className="marquee-content">
                         <p>CURSOS E IMERSÕES. UMA NOVA CULTURA DE MERCADO.</p>
@@ -66,10 +66,15 @@ export function HeroImageBoxSection({ width78Porcent, imageRef }: { width78Porce
 
             <div ref={containerRef} className='hero-image-box_image' aria-hidden={false}>
                 <div className={`reveal-mask ${visible ? 'visible' : ''}`}>
-                    <ImageNext src="/imgs/intro.png" alt="Intro" width={width78Porcent} height={width78Porcent * 0.54} loading="lazy" />
+                    <ImageNext 
+                    src="/imgs/intro.png"   
+                    alt="Estudantes da FIAP em ambiente de aprendizado em tecnologia" 
+                    width={width78Porcent} height={width78Porcent * 0.54} 
+                    loading="lazy" 
+                    />
                 </div>
             </div>
-            <div className='hero-image-box_text-animation-2'>
+            <div className='hero-image-box_text-animation-2' aria-hidden >
                 {/* Linha 1: SKILLS / CONHECIMENTO */}
                 <div className="marquee-wrapper marquee-wrapper--left">
                     <div className="marquee-content">

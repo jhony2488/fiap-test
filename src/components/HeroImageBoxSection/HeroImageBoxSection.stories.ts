@@ -16,7 +16,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    imageRef: { current: null },
     width78Porcent: 1440 * 0.78,
   },
 };

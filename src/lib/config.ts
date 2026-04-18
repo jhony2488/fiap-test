@@ -4,7 +4,7 @@
 
 export const config = {
   app: {
-    name: 'Jaidete',
+    name: 'FIAP Landing Page',
     description: 'Landing Page Institucional',
   },
   api: {

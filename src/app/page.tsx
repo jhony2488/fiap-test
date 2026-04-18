@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import { ArrowUp } from 'lucide-react';
 import {
@@ -21,8 +21,6 @@ export default function Page() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [activeCategory, setActiveCategory] = useState<string>('Tecnologia');
 
-  const imageRef = useRef<HTMLDivElement>(null);
-
   const width78Porcent = useWidth78();
 
   function onScroll() {
@@ -35,26 +33,9 @@ export default function Page() {
 
   useEffect(() => {
     onScroll();
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          // Opcional: parar de observar após animar uma vez
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 } // Dispara quando 20% da imagem aparecer
-    );
-
-    if (imageRef.current) {
-      observer.observe(imageRef.current);
-    }
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', onScroll)
-      return observer.disconnect()
-    };
+    return () => window.removeEventListener('scroll', onScroll)
   }, []);
 
   function toggleCategory(cat: string) {
@@ -66,7 +47,7 @@ export default function Page() {
       <Header progress={progress} />
       <main>
         <HeroApresentationSection />
-        <HeroImageBoxSection width78Porcent={width78Porcent} imageRef={imageRef} />
+        <HeroImageBoxSection width78Porcent={width78Porcent}/>
         <div className="section-divider" />
         <WaterScrollAnimation />
         <CoursesSection activeCategory={activeCategory} toggleCategory={toggleCategory} />

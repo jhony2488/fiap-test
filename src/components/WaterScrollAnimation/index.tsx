@@ -90,6 +90,7 @@ export function WaterScrollAnimation() {
       ref={sectionRef}
       className="water-animation-section"
       style={{ height: '100vh', background: '#09090d' }} // 300vh dá "respiro" para o scroll
+      aria-hidden
     >
       <div className="water-canvas-container">
         {isLoading && (

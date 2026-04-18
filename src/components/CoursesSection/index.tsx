@@ -52,7 +52,7 @@ export function CoursesSection({ activeCategory, toggleCategory }: Props) {
 
 
   return (
-    <section id="cursos" className="section-cursos">
+    <section id="cursos" className="section-cursos" aria-labelledby="cursos-heading">
       <Script
         id="courses-schema"
         type="application/ld+json"
@@ -60,12 +60,12 @@ export function CoursesSection({ activeCategory, toggleCategory }: Props) {
       />
       <div className="cursos-head">
         <div>
-          <h2 className="cursos-title">Cursos</h2>
+          <h2 id="cursos-heading" className="cursos-title">Cursos</h2>
           <div className="cursos-subtitle">Cursos de Curta Duração</div>
         </div>
 
         {/* Desktop category nav */}
-        <nav className="cat-controls desktop" aria-label="Categorias">
+        <nav className="cat-controls desktop" aria-label="Filtrar por categoria de curso">
           {cursos.map((c) => {
             const isActive = c.category === active;
             return (
@@ -75,7 +75,7 @@ export function CoursesSection({ activeCategory, toggleCategory }: Props) {
                 onClick={() => toggleCategory(c.category)}
                 aria-pressed={isActive}
               >
-                <span className="pill-underline" />
+                <span className="pill-underline" aria-hidden />
                 <span className="pill-label">{c.category}</span>
 
               </button>
@@ -87,18 +87,22 @@ export function CoursesSection({ activeCategory, toggleCategory }: Props) {
       <div className="courses-grid">
         {/* Left column: list / heading */}
         <div className="left-col">
-          <h3 className="category-heading">{group.category}</h3>
+          <h3
+            className="category-heading"
+            aria-live="polite"
+            aria-atomic="true"
+          >{group.category}</h3>
 
-          <div className="course-list">
+          <ul className="course-list" role="list">
             {group.items.map((it, idx) => (
-              <div className="course-item" key={idx}>
+              <li className="course-item" key={idx}>
                 <div className="course-meta-title">
                   <h4 className="course-title">{it.title}</h4>
                   <p className="course-meta">{it.meta}</p>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
 
         {/* Right column: mobile vertical category toggles (visible on small screens) */}
