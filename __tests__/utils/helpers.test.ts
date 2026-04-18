@@ -1,4 +1,3 @@
-// tests/utils/helpers.test.ts
 import { pad } from '@/utils/helpers';
 
 describe('helpers.pad', () => {
@@ -17,6 +16,6 @@ describe('helpers.pad', () => {
 
   it('handles zero and negative numbers', () => {
     expect(pad(0)).toBe('000');
-    expect(pad(-5, 3)).toBe('-05'); // current implementation keeps the minus sign, ensure expected
+    expect(pad(-5, 3)).toBe('-05'); 
   });
 });

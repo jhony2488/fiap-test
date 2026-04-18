@@ -37,12 +37,9 @@ export function useIsDesktop(
       setIsDesktop(Boolean(mqMatches && meetsMin));
     };
 
-    // initial evaluation (in case defaultValue differs)
     evaluate();
 
-    // media query listener
     const handleMqChange = (ev: MediaQueryListEvent | MediaQueryList) => {
-      // ev.matches exists in both
       const mqMatches = Boolean((ev as MediaQueryListEvent).matches ?? (ev as MediaQueryList).matches);
       const meetsMin = typeof minValueDesktop === 'number' ? window.innerWidth >= minValueDesktop : true;
       setIsDesktop(mqMatches && meetsMin);
@@ -54,11 +51,8 @@ export function useIsDesktop(
       mq.addListener(handleMqChange as (ev: MediaQueryListEvent) => void);
     }
 
-    // If a minValueDesktop is provided we also need to listen to resize,
-    // because matchMedia won't necessarily fire when innerWidth crosses that custom threshold
     const handleResize = () => {
       if (typeof minValueDesktop === 'number') {
-        // re-evaluate both conditions
         evaluate();
       }
     };

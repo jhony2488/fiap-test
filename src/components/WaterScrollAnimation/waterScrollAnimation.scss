@@ -7,17 +7,13 @@
     min-height: $height-here;
 
     .water-canvas-container {
-        // "Trava" o canvas no meio da tela
         position: sticky;
         top: 50%;
 
         @include flex-center;
-
-        // Respeita seus 78% de largura que calculamos antes
         width: $width-here;
         height: $height-here;
 
-        // Proporção 16:9 para o container
         aspect-ratio: 16 / 9;
         background: #000;
         border-radius: 8px;

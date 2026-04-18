@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.scss";
 import { Suspense } from "react";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -32,7 +31,6 @@ export const metadata: Metadata = {
     telephone: false,
   },
 
-  // Icons / PWA
   icons: {
     icon: [{ url: "/favicon.png", type: "image/png" }],
     shortcut: "/favicon.png",
@@ -44,8 +42,6 @@ export const metadata: Metadata = {
     title: "FIAP",
     statusBarStyle: "black-translucent",
   },
-
-  // Robots
   robots: {
     index: true,
     follow: true,
@@ -53,13 +49,11 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-image-preview": "large",  // permite preview grande de imagens no Google
-      "max-snippet": -1,             // sem limite de caracteres no snippet
+      "max-image-preview": "large",  
+      "max-snippet": -1,         
       "max-video-preview": -1,
     },
   },
-
-  // Open Graph
   openGraph: {
     title: "FIAP — Cursos e Imersões em Tecnologia",
     description:
@@ -75,11 +69,9 @@ export const metadata: Metadata = {
         type: "image/png",
       },
     ],
-    locale: "pt_BR",   // Open Graph usa underline, não hífen
+    locale: "pt_BR",
     type: "website",
   },
-
-  // Twitter / X
   twitter: {
     card: "summary_large_image",
     title: "FIAP — Cursos e Imersões em Tecnologia",
@@ -89,8 +81,6 @@ export const metadata: Metadata = {
     creator: "@FIAP",
     images: ["/favicon.png"],
   },
-
-  // Canonical
   alternates: {
     canonical: "https://www.fiap.com.br",
     languages: {
@@ -113,16 +103,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <head>
-        {/* Polyfill.io - carregado antes da hidratação */}
-        <Script
-          src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default,Promise,fetch,Array.prototype.includes,Array.prototype.find,Array.from,Object.assign,URL,URLSearchParams,Element.prototype.closest,IntersectionObserver,ResizeObserver"
-          strategy="beforeInteractive"
-          onError={() => {
-            console.warn('polyfill.io falhou — carregue fallback local se necessário');
-          }}
-        />
-      </head>
       <body className="antialiased">
         <Suspense fallback={<div>Carregando...</div>}>
           {children}

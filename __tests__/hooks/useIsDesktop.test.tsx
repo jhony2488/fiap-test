@@ -1,4 +1,3 @@
-// tests/hooks/useIsDesktop.test.tsx
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import useIsDesktop from '@/hooks/useIsDesktop';

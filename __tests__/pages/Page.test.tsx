@@ -1,9 +1,7 @@
-// tests/pages/Page.test.tsx
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Page from '@/app/page';
 
-// Mock components used inside Page to small placeholders
 jest.mock('@/components', () => {
   const React = require('react');
   return {

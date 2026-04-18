@@ -15,13 +15,14 @@ import {
 } from '@/components';
 import { useWidth78 } from '@/hooks/useWidth78';
 import { useIsDesktop } from '@/hooks/useIsDesktop';
+import Head from 'next/head';
+import Script from 'next/script';
 
 export default function Page() {
   const [progress, setProgress] = useState<number>(0);
   const [showTop, setShowTop] = useState<boolean>(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [activeCategory, setActiveCategory] = useState<string | null>('Tecnologia');
-
 
   const isLongDesktop = useIsDesktop(1900);
   const width78Porcent = useWidth78();
@@ -47,6 +48,13 @@ export default function Page() {
 
   return (
     <>
+      <Head>
+        {/* Polyfill.io - carregado antes da hidratação */}
+        <Script
+          src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default,Promise,fetch,Array.prototype.includes,Array.prototype.find,Array.from,Object.assign,URL,URLSearchParams,Element.prototype.closest,IntersectionObserver,ResizeObserver"
+          strategy="beforeInteractive"
+        />
+      </Head>
       <Header progress={progress} />
       <main>
         <HeroApresentationSection />
@@ -60,7 +68,7 @@ export default function Page() {
       <Footer />
       {showTop && (
         <Link to="home" smooth offset={-80} duration={800} className="back-top link-scrool-page" style={{ background: 'var(--accent-3)' }}>
-          <ArrowUp size={isLongDesktop ? 76: 24} color="#fff" />
+          <ArrowUp size={isLongDesktop ? 76 : 24} color="#fff" />
         </Link>
       )}
     </>

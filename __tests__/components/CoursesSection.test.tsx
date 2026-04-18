@@ -1,4 +1,3 @@
-// tests/components/CoursesSection.test.tsx
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { CoursesSection } from '@/components/CoursesSection';
@@ -23,10 +22,8 @@ it('renders desktop title and desktop pills', () => {
 
   expect(screen.getByText(/Cursos de Curta Duração/i)).toBeInTheDocument();
 
-  // category heading (left column)
   expect(screen.getByRole('heading', { name: /Tech/i })).toBeInTheDocument();
 
-  // desktop pills (buttons) identified by aria-label
   expect(screen.getByRole('button', { name: /Mostrar Tech/i })).toBeInTheDocument();
   expect(screen.getByRole('button', { name: /Mostrar Biz/i })).toBeInTheDocument();
 });

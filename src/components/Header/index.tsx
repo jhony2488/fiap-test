@@ -1,3 +1,5 @@
+'use client';
+
 import ImageNext from 'next/image';
 import "./header.scss";
 import { useIsDesktop } from '@/hooks/useIsDesktop';
@@ -14,7 +16,7 @@ export function Header({ progress }: { progress: number }) {
                             alt="FIAP"
                             width={isLongDesktop ? 400 : isDesktop ? 160 : 84}
                             height={isLongDesktop ? 70 : isDesktop ? 36 : 23}
-                            priority  // logo é LCP, não deve ter lazy
+                            priority 
                         />
                     </a>
                 </div>

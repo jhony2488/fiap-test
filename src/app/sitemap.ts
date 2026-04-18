@@ -2,7 +2,6 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    // ── Página principal ──
     {
       url: 'https://www.fiap.com.br',
       lastModified: new Date(),

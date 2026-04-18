@@ -16,7 +16,6 @@ const config: StorybookConfig = {
     config.css = {
       preprocessorOptions: {
         scss: {
-          // O segredo: usar o 'join' com process.cwd() para pegar a raiz do projeto
           additionalData: `@import "${join(process.cwd(), "src/styles/variables.scss").replace(/\\/g, "/")}"; @import "${join(process.cwd(), "src/styles/animations.scss").replace(/\\/g, "/")}"; @import "${join(process.cwd(), "src/styles/mixins.scss").replace(/\\/g, "/")}";`,
           
         },

@@ -1,4 +1,4 @@
-# Jaidete Site Landing Page
+# FIAP Landing Page
 
 Uma aplicação Next.js moderna com TypeScript e Tailwind CSS.
 

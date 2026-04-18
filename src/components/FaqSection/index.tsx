@@ -4,14 +4,9 @@ import React, { useEffect, useState } from "react";
 import { faqItems } from "@/utils/consts";
 import "./faqSection.scss";
 import Script from "next/script";
+import { PropsFaqSection } from "./faqSection.types";
 
-type Props = {
-  openFaqIndex: number | null;
-  setOpenFaqIndex: (index: number | null) => void;
-};
-
-export function FaqSection({ openFaqIndex, setOpenFaqIndex }: Props) {
-  // track if we are in mobile width so we can manage aria-hidden reliably
+export function FaqSection({ openFaqIndex, setOpenFaqIndex }: PropsFaqSection) {
   const [isMobile, setIsMobile] = useState<boolean>(typeof window !== "undefined" ? window.innerWidth <= 900 : false);
 
   const faqSchema = {

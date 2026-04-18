@@ -6,9 +6,8 @@ import { Footer } from '@/components/Footer';
 describe('Footer', () => {
   it('renders footer content and matches snapshot', () => {
     const { asFragment } = render(<Footer />);
-    // Sanity checks - footer element present
     const footer = screen.getByRole('contentinfo') || screen.getByTestId?.('footer');
-    expect(footer || true).toBeTruthy(); // at least the render did not crash
+    expect(footer).toBeTruthy(); 
     expect(asFragment()).toMatchSnapshot();
   });
 });

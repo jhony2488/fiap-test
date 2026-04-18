@@ -6,7 +6,7 @@
   width: 100vw;
   background: var(--bg);
   background-image: url("/imgs/sobre.png");
-  background-position: center center; // Horizontal e Vertical
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: hidden;
@@ -28,12 +28,11 @@
   font-weight: 400;
   font-size: 7.5rem;
   line-height: 8.75rem;
-
   span:nth-child(1) {
     margin-left: 6rem;
     animation:
       typing 2s steps(18) forwards,
-      cursor-white 0.5s step-end 4; // Pisca por 2s e para
+      cursor-white 0.5s step-end 4;
   }
   span {
     display: inline-block;
@@ -43,15 +42,12 @@
     border-right: 4px solid transparent;
     animation-fill-mode: forwards;
   }
-
-  // SEGUNDO SPAN (O Segredo está aqui)
   span:nth-child(3) {
-    // nth-child(3) por causa do <br/>
-    visibility: hidden; // Totalmente oculto (espaço e cursor)
+    visibility: hidden;
     animation:
       typing 1.5s steps(13) 2s forwards,
       cursor-white 0.5s step-end 2.2 2s,
-      show-second 0.01s forwards 2s; // Torna visível exatamente aos 2s
+      show-second 0.01s forwards 2s;
     margin-top: -2rem;
   }
 }

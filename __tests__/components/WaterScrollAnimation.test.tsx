@@ -1,4 +1,3 @@
-// tests/components/WaterScrollAnimation.test.tsx
 import React from 'react';
 import { render } from '@testing-library/react';
 import { WaterScrollAnimation } from '@/components/WaterScrollAnimation';

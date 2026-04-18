@@ -3,24 +3,23 @@
 import { useEffect, useRef, useState } from "react";
 import "./heroImageBoxSection.scss";
 import ImageNext from 'next/image';
-export function HeroImageBoxSection({ width78Porcent }: { width78Porcent: number }) {
+import { PropsHeroImageBoxSection } from "./courseSection.types";
+export function HeroImageBoxSection({ width78Porcent }:  PropsHeroImageBoxSection) {
 
     const containerRef = useRef<HTMLDivElement | null>(null);
-    const [visible, setVisible] = useState<boolean>(false);
+    const [visibleImageApresentation, setVisibleImageApresentation] = useState<boolean>(false);
 
     useEffect(() => {
-        // SSR guard
         if (typeof window === 'undefined') {
-            setVisible(true);
+            setVisibleImageApresentation(true);
             return;
         }
 
         const el = containerRef.current;
         if (!el) return;
 
-        // Se IntersectionObserver não existir, mostra imediatamente
         if (!('IntersectionObserver' in window)) {
-            setVisible(true);
+            setVisibleImageApresentation(true);
             return;
         }
 
@@ -28,7 +27,7 @@ export function HeroImageBoxSection({ width78Porcent }: { width78Porcent: number
             (entries, observer) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        setVisible(true);
+                        setVisibleImageApresentation(true);
                         observer.unobserve(entry.target);
                     }
                 });
@@ -36,7 +35,7 @@ export function HeroImageBoxSection({ width78Porcent }: { width78Porcent: number
             {
                 root: null,
                 rootMargin: '0px 0px -12% 0px',
-                threshold: 0.05, // pequeno valor para iniciar quando 5% visível
+                threshold: 0.05,
             }
         );
 
@@ -65,7 +64,7 @@ export function HeroImageBoxSection({ width78Porcent }: { width78Porcent: number
             </div>
 
             <div ref={containerRef} className='hero-image-box_image' aria-hidden={false}>
-                <div className={`reveal-mask ${visible ? 'visible' : ''}`}>
+                <div className={`reveal-mask ${visibleImageApresentation ? 'visible' : ''}`}>
                     <ImageNext 
                     src="/imgs/intro.png"   
                     alt="Estudantes da FIAP em ambiente de aprendizado em tecnologia" 
@@ -75,7 +74,6 @@ export function HeroImageBoxSection({ width78Porcent }: { width78Porcent: number
                 </div>
             </div>
             <div className='hero-image-box_text-animation-2' aria-hidden >
-                {/* Linha 1: SKILLS / CONHECIMENTO */}
                 <div className="marquee-wrapper marquee-wrapper--left">
                     <div className="marquee-content">
                         <p>
@@ -84,14 +82,13 @@ export function HeroImageBoxSection({ width78Porcent }: { width78Porcent: number
                             <span>CONHECIMENTO</span>
                             <ImageNext src="/svgs/ellipse.svg" alt="dot" width={38} height={38} />
                         </p>
-                        {/* Cópia 2 */}
                         <p>
                             <span>SKILLS</span>
                             <ImageNext src="/svgs/ellipse.svg" alt="dot" width={38} height={38} />
                             <span>CONHECIMENTO</span>
                             <ImageNext src="/svgs/ellipse.svg" alt="dot" width={38} height={38} />
                         </p>
-                        {/* Cópia 3 */}
+
                         <p>
                             <span>SKILLS</span>
                             <ImageNext src="/svgs/ellipse.svg" alt="dot" width={38} height={38} />
@@ -101,7 +98,6 @@ export function HeroImageBoxSection({ width78Porcent }: { width78Porcent: number
                     </div>
                 </div>
 
-                {/* Linha 2: MUITO ALÉM DOS TUTORIAIS */}
                 <div className="marquee-wrapper marquee-wrapper--right">
                     <div className="marquee-content">
                         <p>

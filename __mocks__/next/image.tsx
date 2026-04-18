@@ -1,4 +1,3 @@
-// src/__mocks__/next/image.tsx
 import React from 'react';
 
 export default function NextImageMock(props: any) {

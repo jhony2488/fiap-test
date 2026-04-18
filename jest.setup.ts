@@ -1,8 +1,6 @@
-// jest.setup.ts
-import '@testing-library/jest-dom'; // import correto (adiciona os matchers)
+import '@testing-library/jest-dom'; 
 import 'whatwg-fetch';
 
-// Mock next/image para testes (retorna <img>)
 jest.mock('next/image', () => {
   const React = require('react');
   return function Image(props: any) {
@@ -20,15 +18,12 @@ jest.mock('next/image', () => {
   };
 });
 
-// Mock next/script como no-op
 jest.mock('next/script', () => (props: any) => null);
 
-// Mock next/navigation se necessário
 jest.mock('next/navigation', () => ({
   useRouter: () => ({ push: jest.fn(), replace: jest.fn(), prefetch: jest.fn().mockResolvedValue(undefined), pathname: '/' }),
 }));
 
-// Minimal IntersectionObserver mock
 class IntersectionObserverMock {
   cb?: IntersectionObserverCallback;
   constructor(cb?: IntersectionObserverCallback) {
@@ -43,8 +38,6 @@ Object.defineProperty(window, 'IntersectionObserver', {
   configurable: true,
   value: IntersectionObserverMock,
 });
-
-// Basic matchMedia mock (tests can override)
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: (query: string) => ({
