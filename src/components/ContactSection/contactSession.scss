@@ -1,24 +1,51 @@
+/* Variáveis (se você já tiver variáveis globais, defina var(--accent-3-dark) lá) */
+:root {
+  --accent-3: #ff2c7f;         /* sua cor atual */
+  --accent-3-dark: #b30f4a;    /* variante escura com contraste suficiente vs branco */
+  --muted: #9fa8b3;
+}
+
+/* botão principal */
 .link-see-courses {
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: 14px 22px;
-  border-radius: 12;
-  background: var(--accent-3);
+  border-radius: 8px; /* corrigi a unidade e removi duplicidade */
+  background: var(--accent-3-dark, var(--accent-3));
   color: #fff;
   text-decoration: none;
   font-weight: 700;
   margin-top: 2rem;
-  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 180ms ease, transform 120ms ease, box-shadow 120ms ease;
+  /* acessibilidade: assegura bom foco */
+  outline: none;
+  border: none;
 }
-.link-see-courses:hover {
-  transition: background-color 1s ease-in-out;
-  background-color: var(--accent-4);
+
+/* hover: aumenta contraste levemente ou altera tom */
+.link-see-courses:hover,
+.link-see-courses:active {
+  background: #9e0d42; /* ligeiramente mais escuro/contrastante */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(179,15,74,0.14);
 }
+
+/* foco por teclado (essencial) */
+.link-see-courses:focus-visible {
+  box-shadow: 0 0 0 4px rgba(179,15,74,0.18);
+  outline: none;
+}
+
+/* descrição abaixo do botão */
 .link-see-courses-description {
   margin-top: -0.9rem;
   margin-bottom: 3rem;
   color: var(--muted);
 }
+
+/* seções */
 .contact-section {
   padding: 6rem 20px;
   padding-bottom: 10rem;
