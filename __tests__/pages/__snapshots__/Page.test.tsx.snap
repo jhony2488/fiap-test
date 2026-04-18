@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Page integration renders top-level sections and matches snapshot 1`] = `
+<DocumentFragment>
+  <header
+    data-testid="header"
+  >
+    Header
+  </header>
+  <main>
+    <div
+      data-testid="hero-ap"
+    >
+      HeroAp
+    </div>
+    <div
+      data-testid="hero-image"
+    >
+      HeroImage
+    </div>
+    <div
+      class="section-divider"
+    />
+    <div
+      data-testid="water"
+    >
+      Water
+    </div>
+    <div
+      data-testid="courses"
+    >
+      Courses
+    </div>
+    <div
+      data-testid="faq"
+    >
+      FAQ
+    </div>
+    <div
+      data-testid="contact"
+    >
+      Contact
+    </div>
+  </main>
+  <footer
+    data-testid="footer"
+  >
+    Footer
+  </footer>
+</DocumentFragment>
+`;

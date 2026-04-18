@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`WaterScrollAnimation renders without crashing and matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    aria-hidden="true"
+    class="water-animation-section"
+    style="height: 100vh; background: rgb(9, 9, 13);"
+  >
+    <div
+      class="water-canvas-container"
+    >
+      <div
+        class="water-loading"
+      >
+        Carregando Animação...
+      </div>
+      <canvas
+        height="1080"
+        style="width: 100%; height: auto; opacity: 0; transition: opacity 0.5s ease;"
+        width="1920"
+      />
+    </div>
+  </section>
+</DocumentFragment>
+`;

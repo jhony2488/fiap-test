@@ -1,0 +1,262 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`CoursesSection matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="cursos-heading"
+    class="section-cursos"
+    id="cursos"
+  >
+    <div
+      class="cursos-head"
+    >
+      <div>
+        <h2
+          class="cursos-title"
+          id="cursos-heading"
+        >
+          Cursos
+        </h2>
+        <div
+          class="cursos-subtitle"
+        >
+          Cursos de Curta Duração
+        </div>
+      </div>
+      <nav
+        aria-label="Filtrar por categoria de curso"
+        class="cat-controls desktop"
+      >
+        <button
+          aria-label="Mostrar Tech"
+          aria-pressed="true"
+          class="cat-pill on"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="pill-underline"
+          />
+          <span
+            class="pill-label"
+          >
+            Tech
+          </span>
+        </button>
+        <button
+          aria-label="Mostrar Biz"
+          aria-pressed="false"
+          class="cat-pill "
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="pill-underline"
+          />
+          <span
+            class="pill-label"
+          >
+            Biz
+          </span>
+        </button>
+      </nav>
+    </div>
+    <div
+      class="courses-grid"
+    >
+      <div
+        aria-hidden="false"
+        class="left-col desktop-left-col"
+      >
+        <h3
+          aria-atomic="true"
+          aria-live="polite"
+          class="category-heading"
+        >
+          Tech
+        </h3>
+        <ul
+          class="course-list"
+          role="list"
+        >
+          <li
+            class="course-item"
+          >
+            <div
+              class="course-meta-title"
+            >
+              <h4
+                class="course-title"
+              >
+                A
+              </h4>
+              <p
+                class="course-meta"
+              >
+                m1
+              </p>
+            </div>
+          </li>
+          <li
+            class="course-item"
+          >
+            <div
+              class="course-meta-title"
+            >
+              <h4
+                class="course-title"
+              >
+                B
+              </h4>
+              <p
+                class="course-meta"
+              >
+                m2
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <aside
+        aria-label="Categorias (mobile)"
+        class="right-col mobile"
+      >
+        <div
+          class="mobile-category-block"
+        >
+          <div
+            class="cat-row-mobile"
+          >
+            <div
+              class="cat-name-mobile"
+            >
+              Tech
+            </div>
+            <button
+              aria-controls="mobile-collapse-tech"
+              aria-expanded="false"
+              aria-label="Abrir Tech"
+              aria-pressed="false"
+              class="cat-toggle "
+              type="button"
+            >
+              <img
+                alt="Abrir Tech"
+                data-next-image-mock="true"
+                height="60"
+                src="/svgs/iconButtonPositiveSinal.svg"
+                width="60"
+              />
+            </button>
+          </div>
+          <div
+            aria-hidden="true"
+            class="mobile-collapse "
+            id="mobile-collapse-tech"
+          >
+            <ul
+              class="course-list mobile-list"
+              role="list"
+            >
+              <li
+                class="course-item"
+              >
+                <div
+                  class="course-meta-title"
+                >
+                  <h4
+                    class="course-title"
+                  >
+                    A
+                  </h4>
+                  <p
+                    class="course-meta"
+                  >
+                    m1
+                  </p>
+                </div>
+              </li>
+              <li
+                class="course-item"
+              >
+                <div
+                  class="course-meta-title"
+                >
+                  <h4
+                    class="course-title"
+                  >
+                    B
+                  </h4>
+                  <p
+                    class="course-meta"
+                  >
+                    m2
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="mobile-category-block"
+        >
+          <div
+            class="cat-row-mobile"
+          >
+            <div
+              class="cat-name-mobile"
+            >
+              Biz
+            </div>
+            <button
+              aria-controls="mobile-collapse-biz"
+              aria-expanded="false"
+              aria-label="Abrir Biz"
+              aria-pressed="false"
+              class="cat-toggle "
+              type="button"
+            >
+              <img
+                alt="Abrir Biz"
+                data-next-image-mock="true"
+                height="60"
+                src="/svgs/iconButtonPositiveSinal.svg"
+                width="60"
+              />
+            </button>
+          </div>
+          <div
+            aria-hidden="true"
+            class="mobile-collapse "
+            id="mobile-collapse-biz"
+          >
+            <ul
+              class="course-list mobile-list"
+              role="list"
+            >
+              <li
+                class="course-item"
+              >
+                <div
+                  class="course-meta-title"
+                >
+                  <h4
+                    class="course-title"
+                  >
+                    C
+                  </h4>
+                  <p
+                    class="course-meta"
+                  >
+                    m3
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</DocumentFragment>
+`;

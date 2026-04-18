@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`HeroApresentationSection renders hero presentation and matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="hero-heading"
+    class="hero-wrap"
+    id="home"
+  >
+    <div
+      class="hero-inner"
+    >
+      <div
+        class="hero-content"
+      >
+        <h1
+          class="hero-title"
+          id="hero-heading"
+        >
+          <span>
+            A melhor faculdade
+          </span>
+          <br
+            aria-hidden="true"
+          />
+          <span>
+            de tecnologia
+          </span>
+        </h1>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

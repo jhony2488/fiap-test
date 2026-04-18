@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "lucide-react": "^0.460.0",
@@ -23,16 +26,25 @@
     "@storybook/addon-docs": "^10.3.5",
     "@storybook/addon-vitest": "^10.3.5",
     "@storybook/nextjs-vite": "^10.3.5",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
     "@types/node": "^22.10.2",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.2",
     "@types/react-scroll": "^1.8.10",
     "@vitest/browser-playwright": "^4.1.4",
     "@vitest/coverage-v8": "^4.1.4",
+    "add": "^2.0.6",
     "autoprefixer": "^10.5.0",
     "eslint": "^9.17.0",
     "eslint-config-next": "^15.1.0",
     "eslint-plugin-storybook": "^10.3.5",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "ou": "^0.0.2",
     "playwright": "^1.59.1",
     "postcss": "^8.5.10",
     "postcss-preset-env": "^11.2.1",
@@ -40,7 +52,9 @@
     "storybook": "^10.3.5",
     "typescript": "^5.7.2",
     "vite": "^8.0.8",
-    "vitest": "^4.1.4"
+    "vitest": "^4.1.4",
+    "whatwg-fetch": "^3.6.20",
+    "yarn": "^1.22.22"
   },
   "eslintConfig": {
     "extends": [

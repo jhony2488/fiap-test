@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ContactSection renders contact section and matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="contact-heading"
+    class="contact-section fade-up-delayed"
+    id="contato"
+    style="padding: 6rem 20px 10rem 20px;"
+  >
+    <div
+      style="max-width: 900px; margin: 0px auto; text-align: center;"
+    >
+      <h2
+        id="contact-heading"
+        style="font-size: 34px; color: var(--fg);"
+      >
+        Pronto para começar?
+      </h2>
+      <p
+        class="link-see-courses-description"
+      >
+        Conheça nossos cursos e imersões.
+      </p>
+      <a
+        aria-label="Ver cursos — ir para a seção de cursos"
+        class="link-see-courses"
+        role="link"
+      >
+        VER CURSOS
+      </a>
+    </div>
+  </section>
+</DocumentFragment>
+`;

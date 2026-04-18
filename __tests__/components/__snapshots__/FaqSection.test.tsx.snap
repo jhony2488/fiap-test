@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`FaqSection renders FAQ and toggles items when clicked 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="faq-heading"
+    class="faq fade-up-delayed"
+    id="faq"
+  >
+    <div
+      class="faq-box-title"
+    >
+      <h2
+        class="faq_title"
+        id="faq-heading"
+      >
+        FAQ
+      </h2>
+      <p
+        class="faq_subtitle"
+      >
+        Dúvidas Frequentes
+      </p>
+    </div>
+    <div
+      aria-live="polite"
+      aria-relevant="additions"
+      class="faq-grid"
+    >
+      <article
+        aria-expanded="false"
+        aria-labelledby="faq-question-0"
+        class="faq-card "
+      >
+        <button
+          aria-controls="faq-answer-0"
+          aria-expanded="false"
+          style="width: 100%; text-align: left; padding: 0px; cursor: pointer;"
+        >
+          <div
+            class="faq-question-style"
+          >
+            QUANDO POSSO ME MATRICULAR?
+          </div>
+        </button>
+        <div
+          aria-hidden="false"
+          aria-labelledby="faq-btn-0"
+          id="faq-answer-0"
+          role="region"
+          style="opacity: 0; transition: opacity 0.3s ease;"
+        >
+          <p
+            class="faq-answer-style"
+          >
+            A matrícula pode ser feita a qualquer momento durante o período de inscrições.
+          </p>
+        </div>
+      </article>
+      <article
+        aria-expanded="false"
+        aria-labelledby="faq-question-1"
+        class="faq-card "
+      >
+        <button
+          aria-controls="faq-answer-1"
+          aria-expanded="false"
+          style="width: 100%; text-align: left; padding: 0px; cursor: pointer;"
+        >
+          <div
+            class="faq-question-style"
+          >
+            POSSO FAZER DOIS OU MAIS CURSOS AO MESMO TEMPO?
+          </div>
+        </button>
+        <div
+          aria-hidden="false"
+          aria-labelledby="faq-btn-1"
+          id="faq-answer-1"
+          role="region"
+          style="opacity: 0; transition: opacity 0.3s ease;"
+        >
+          <p
+            class="faq-answer-style"
+          >
+            Sim, desde que as datas não coincidam.
+          </p>
+        </div>
+      </article>
+      <article
+        aria-expanded="false"
+        aria-labelledby="faq-question-2"
+        class="faq-card "
+      >
+        <button
+          aria-controls="faq-answer-2"
+          aria-expanded="false"
+          style="width: 100%; text-align: left; padding: 0px; cursor: pointer;"
+        >
+          <div
+            class="faq-question-style"
+          >
+            QUAIS OS PRÉ-REQUISITOS?
+          </div>
+        </button>
+        <div
+          aria-hidden="false"
+          aria-labelledby="faq-btn-2"
+          id="faq-answer-2"
+          role="region"
+          style="opacity: 0; transition: opacity 0.3s ease;"
+        >
+          <p
+            class="faq-answer-style"
+          >
+            Conteúdos em vídeos, podcasts, PDFs e quizzes que garantem uma jornada leve de aprendizado.
+          </p>
+        </div>
+      </article>
+      <article
+        aria-expanded="false"
+        aria-labelledby="faq-question-3"
+        class="faq-card "
+      >
+        <button
+          aria-controls="faq-answer-3"
+          aria-expanded="false"
+          style="width: 100%; text-align: left; padding: 0px; cursor: pointer;"
+        >
+          <div
+            class="faq-question-style"
+          >
+            QUAL A DURAÇÃO DOS CURSOS?
+          </div>
+        </button>
+        <div
+          aria-hidden="false"
+          aria-labelledby="faq-btn-3"
+          id="faq-answer-3"
+          role="region"
+          style="opacity: 0; transition: opacity 0.3s ease;"
+        >
+          <p
+            class="faq-answer-style"
+          >
+            Entre 4 e 12 semanas, dependendo do formato.
+          </p>
+        </div>
+      </article>
+      <article
+        aria-expanded="false"
+        aria-labelledby="faq-question-4"
+        class="faq-card "
+      >
+        <button
+          aria-controls="faq-answer-4"
+          aria-expanded="false"
+          style="width: 100%; text-align: left; padding: 0px; cursor: pointer;"
+        >
+          <div
+            class="faq-question-style"
+          >
+            PRECISO LEVAR ALGUM MATERIAL?
+          </div>
+        </button>
+        <div
+          aria-hidden="false"
+          aria-labelledby="faq-btn-4"
+          id="faq-answer-4"
+          role="region"
+          style="opacity: 0; transition: opacity 0.3s ease;"
+        >
+          <p
+            class="faq-answer-style"
+          >
+            Recomenda-se notebook para atividades práticas.
+          </p>
+        </div>
+      </article>
+      <article
+        aria-expanded="false"
+        aria-labelledby="faq-question-5"
+        class="faq-card "
+      >
+        <button
+          aria-controls="faq-answer-5"
+          aria-expanded="false"
+          style="width: 100%; text-align: left; padding: 0px; cursor: pointer;"
+        >
+          <div
+            class="faq-question-style"
+          >
+            RECEBO CERTIFICADO?
+          </div>
+        </button>
+        <div
+          aria-hidden="false"
+          aria-labelledby="faq-btn-5"
+          id="faq-answer-5"
+          role="region"
+          style="opacity: 0; transition: opacity 0.3s ease;"
+        >
+          <p
+            class="faq-answer-style"
+          >
+            Sim — certificado digital de conclusão.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+</DocumentFragment>
+`;

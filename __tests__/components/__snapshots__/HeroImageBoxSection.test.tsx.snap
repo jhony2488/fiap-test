@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`HeroImageBoxSection renders with provided width78Porcent prop and matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    aria-label="Apresentação visual e animações da FIAP"
+    class="hero-image-box"
+  >
+    <div
+      aria-hidden="true"
+      class="hero-image-box_text-animation-1"
+    >
+      <div
+        class="marquee-wrapper marquee-wrapper--ltr"
+      >
+        <div
+          class="marquee-content"
+        >
+          <p>
+            CURSOS E IMERSÕES. UMA NOVA CULTURA DE MERCADO.
+          </p>
+          <p>
+            CURSOS E IMERSÕES. UMA NOVA CULTURA DE MERCADO.
+          </p>
+          <p>
+            CURSOS E IMERSÕES. UMA NOVA CULTURA DE MERCADO.
+          </p>
+          <p>
+            CURSOS E IMERSÕES. UMA NOVA CULTURA DE MERCADO.
+          </p>
+        </div>
+      </div>
+      <div
+        class="marquee-wrapper marquee-wrapper--rtl"
+      >
+        <div
+          class="marquee-content"
+        >
+          <p>
+            TECNOLOGIA, INOVAÇÃO E NEGÓCIOS. PRESENTE E FUTURO.
+          </p>
+          <p>
+            TECNOLOGIA, INOVAÇÃO E NEGÓCIOS. PRESENTE E FUTURO.
+          </p>
+          <p>
+            TECNOLOGIA, INOVAÇÃO E NEGÓCIOS. PRESENTE E FUTURO.
+          </p>
+          <p>
+            TECNOLOGIA, INOVAÇÃO E NEGÓCIOS. PRESENTE E FUTURO.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-hidden="false"
+      class="hero-image-box_image"
+    >
+      <div
+        class="reveal-mask "
+      >
+        <img
+          alt="Estudantes da FIAP em ambiente de aprendizado em tecnologia"
+          data-next-image-mock="true"
+          height="648"
+          src="/imgs/intro.png"
+          width="1200"
+        />
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+      class="hero-image-box_text-animation-2"
+    >
+      <div
+        class="marquee-wrapper marquee-wrapper--left"
+      >
+        <div
+          class="marquee-content"
+        >
+          <p>
+            <span>
+              SKILLS
+            </span>
+            <img
+              alt="dot"
+              data-next-image-mock="true"
+              height="38"
+              src="/svgs/ellipse.svg"
+              width="38"
+            />
+            <span>
+              CONHECIMENTO
+            </span>
+            <img
+              alt="dot"
+              data-next-image-mock="true"
+              height="38"
+              src="/svgs/ellipse.svg"
+              width="38"
+            />
+          </p>
+          <p>
+            <span>
+              SKILLS
+            </span>
+            <img
+              alt="dot"
+              data-next-image-mock="true"
+              height="38"
+              src="/svgs/ellipse.svg"
+              width="38"
+            />
+            <span>
+              CONHECIMENTO
+            </span>
+            <img
+              alt="dot"
+              data-next-image-mock="true"
+              height="38"
+              src="/svgs/ellipse.svg"
+              width="38"
+            />
+          </p>
+          <p>
+            <span>
+              SKILLS
+            </span>
+            <img
+              alt="dot"
+              data-next-image-mock="true"
+              height="38"
+              src="/svgs/ellipse.svg"
+              width="38"
+            />
+            <span>
+              CONHECIMENTO
+            </span>
+            <img
+              alt="dot"
+              data-next-image-mock="true"
+              height="38"
+              src="/svgs/ellipse.svg"
+              width="38"
+            />
+          </p>
+        </div>
+      </div>
+      <div
+        class="marquee-wrapper marquee-wrapper--right"
+      >
+        <div
+          class="marquee-content"
+        >
+          <p>
+            <span>
+              MUITO ALÉM DOS TUTORIAIS
+            </span>
+            <img
+              alt="dot"
+              data-next-image-mock="true"
+              height="38"
+              src="/svgs/ellipse.svg"
+              width="38"
+            />
+          </p>
+          <p>
+            <span>
+              MUITO ALÉM DOS TUTORIAIS
+            </span>
+            <img
+              alt="dot"
+              data-next-image-mock="true"
+              height="38"
+              src="/svgs/ellipse.svg"
+              width="38"
+            />
+          </p>
+          <p>
+            <span>
+              MUITO ALÉM DOS TUTORIAIS
+            </span>
+            <img
+              alt="dot"
+              data-next-image-mock="true"
+              height="38"
+              src="/svgs/ellipse.svg"
+              width="38"
+            />
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

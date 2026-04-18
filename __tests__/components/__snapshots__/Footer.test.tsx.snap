@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Footer renders footer content and matches snapshot 1`] = `
+<DocumentFragment>
+  <footer
+    class="site-footer"
+    role="contentinfo"
+  >
+    <div
+      class="site-footer_wrapper"
+    >
+      <div>
+        <h3
+          class="site-footer_wrapper-title"
+        >
+          FIAP
+        </h3>
+        <p
+          class="site-footer_wrapper-subtitle"
+        >
+          Cursos em tecnologia, inovação e negócios.
+        </p>
+      </div>
+      <div>
+        <h3
+          class="site-footer_wrapper-title"
+        >
+          Localização
+        </h3>
+        <p
+          class="site-footer_wrapper-subtitle"
+        >
+          Exemplo - endereço fictício
+        </p>
+      </div>
+      <div>
+        <h3
+          class="site-footer_wrapper-title"
+        >
+          Atendimento
+        </h3>
+        <p
+          class="site-footer_wrapper-subtitle"
+        >
+          Remoto / On-site
+        </p>
+      </div>
+      <nav
+        aria-label="Redes sociais da FIAP"
+      >
+        <h3
+          class="site-footer_wrapper-title"
+        >
+          Redes
+        </h3>
+        <div
+          class="site-footer_wrapper-container-social-midia"
+        >
+          <a
+            aria-label="Instagram da FIAP"
+            href="https://facebook.com/fiap"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-instagram"
+              fill="none"
+              height="20"
+              stroke="#FF2C7F"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                height="20"
+                rx="5"
+                ry="5"
+                width="20"
+                x="2"
+                y="2"
+              />
+              <path
+                d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+              />
+              <line
+                x1="17.5"
+                x2="17.51"
+                y1="6.5"
+                y2="6.5"
+              />
+            </svg>
+          </a>
+          <a
+            aria-label="Facebook da FIAP"
+            href="https://facebook.com/fiap"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-facebook"
+              fill="none"
+              height="20"
+              stroke="#FF2C7F"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+    <p
+      class="copyright"
+    >
+      © 2026 FIAP - Todos os direitos reservados.
+    </p>
+  </footer>
+</DocumentFragment>
+`;
