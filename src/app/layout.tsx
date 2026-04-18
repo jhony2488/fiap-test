@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.scss";
 import { Suspense } from "react";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: {
@@ -49,8 +50,8 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-image-preview": "large",  
-      "max-snippet": -1,         
+      "max-image-preview": "large",
+      "max-snippet": -1,
       "max-video-preview": -1,
     },
   },
@@ -92,8 +93,7 @@ export const metadata: Metadata = {
 export const viewport = {
   themeColor: '#000',
   width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1
+  initialScale: 1
 }
 
 export default function RootLayout({
@@ -103,6 +103,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com"></link>
+      </Head>
       <body className="antialiased">
         <Suspense fallback={<div>Carregando...</div>}>
           {children}
