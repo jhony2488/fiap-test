@@ -132,6 +132,12 @@
     max-height 0.22s ease,
     opacity 0.22s ease;
 }
+.faq-card_button{
+  width: 100%; 
+  text-align: left; 
+  padding: 0; 
+  cursor: pointer;
+}
 
 @media (max-width: 900px) {
   .faq-grid {

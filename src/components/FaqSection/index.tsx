@@ -54,7 +54,7 @@ export function FaqSection({ openFaqIndex, setOpenFaqIndex }: PropsFaqSection) {
                 onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
                 aria-controls={`faq-answer-${idx}`}
                 aria-expanded={isOpen}
-                style={{ width: "100%", textAlign: "left", padding: 0, cursor: "pointer" }}
+                className="faq-card_button"
               >
                 <div className={`${isOpen ? "faq-open-question" : "faq-question-style"}`}>{f.question}</div>
               </button>

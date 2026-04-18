@@ -55,7 +55,7 @@ export function WaterScrollAnimation() {
       const rect = sectionRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
-      const start = windowHeight/2.1;
+      const start = windowHeight / 2.1;
       const end = 0;
 
       const rawProgress = (start - rect.top) / (start - end);
@@ -77,7 +77,6 @@ export function WaterScrollAnimation() {
     <section
       ref={sectionRef}
       className="water-animation-section"
-      style={{ height: '100vh', background: '#09090d' }}
       aria-hidden
     >
       <div className="water-canvas-container">
@@ -86,14 +85,9 @@ export function WaterScrollAnimation() {
         )}
         <canvas
           ref={canvasRef}
-          width={1920} 
+          width={1920}
           height={1080}
-          style={{
-            width: '100%', 
-            height: 'auto',
-            opacity: isLoading ? 0 : 1,
-            transition: 'opacity 0.5s ease'
-          }}
+          className={`water-canvas-container-animation${isLoading ? " animation-opacity-none" : ""}`}
         />
       </div>
     </section>

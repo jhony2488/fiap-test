@@ -67,7 +67,7 @@ export default function Page() {
       </main>
       <Footer />
       {showTop && (
-        <Link to="home" smooth offset={-80} duration={800} className="back-top link-scrool-page" style={{ background: 'var(--accent-3)' }}>
+        <Link to="home" smooth offset={-80} duration={800} className="back-top link-scrool-page" aria-label="Voltar para o topo">
           <ArrowUp size={isLongDesktop ? 76 : 24} color="#fff" />
         </Link>
       )}
