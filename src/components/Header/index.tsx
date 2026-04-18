@@ -1,6 +1,9 @@
 import ImageNext from 'next/image';
 import "./header.scss";
+import { useIsDesktop } from '@/hooks/useIsDesktop';
 export function Header({ progress }: { progress: number }) {
+    const isDesktop = useIsDesktop();
+    const isLongDesktop = useIsDesktop(1900);
     return (
         <header className="header" role="banner">
             <div className="header-inner">
@@ -9,8 +12,8 @@ export function Header({ progress }: { progress: number }) {
                         <ImageNext
                             src="/svgs/logo-fiap.svg"
                             alt="FIAP"
-                            width={160}
-                            height={36}
+                            width={isLongDesktop ? 400 : isDesktop ? 160 : 84}
+                            height={isLongDesktop ? 70 : isDesktop ? 36 : 23}
                             priority  // logo é LCP, não deve ter lazy
                         />
                     </a>

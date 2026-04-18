@@ -4,4 +4,31 @@
   background: var(--card);
   color: var(--muted);
   padding-bottom: 2rem;
+  &_wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 28px;
+    &-title{
+       color: var(--accent); 
+       font-weight: 700; 
+    }
+    &-subtitle {
+        color: var(--muted);
+    }
+    &-container-social-midia {
+        display: flex;
+        gap: 12px;
+        a:hover{
+          transform: scale(1.2);
+          transition: transform 1s ease-in-out;
+        }
+    }
+  }
+  .copyright {
+    text-align: center;
+    margin-top: 28px;
+    color: var(--muted);
+  }
 }

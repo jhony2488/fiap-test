@@ -24,7 +24,6 @@ export function FaqSection({ openFaqIndex, setOpenFaqIndex }: Props) {
     }))
   };
 
-
   useEffect(() => {
     function onResize() {
       setIsMobile(window.innerWidth <= 900);
@@ -61,7 +60,6 @@ export function FaqSection({ openFaqIndex, setOpenFaqIndex }: Props) {
                 aria-controls={`faq-answer-${idx}`}
                 aria-expanded={isOpen}
                 style={{ width: "100%", textAlign: "left", padding: 0, cursor: "pointer" }}
-              // no inline !important; button is styled in SCSS
               >
                 <div className={`${isOpen ? "faq-open-question" : "faq-question-style"}`}>{f.question}</div>
               </button>

@@ -52,8 +52,8 @@
   top: -2rem; /* positioned above the question line */
   width: 58px; /* 58px as requested */
   height: 2px;
-  background: rgba(255, 255, 255, 0.12); /* subtle gray */
-  opacity: 1;
+  background: #8a959b80; /* subtle gray */
+  opacity: 50;
   transition:
     background 0.18s ease,
     transform 0.18s ease,
@@ -100,13 +100,15 @@
 
 /* Accent full-width line (pink gradient) that appears on hover/active */
 /* we draw it via the question pseudo element so it aligns with the top of the card */
-.faq-question-style::after ,.faq-open-question::after   {
+.faq-question-style::after,
+.faq-open-question::after {
   content: "";
   position: absolute;
   left: 0;
   top: -2rem;
   width: 100%; /* full width of the question (so full card width) */
   height: 2px;
+  opacity: 50;
   background: transparent;
   transition:
     background 0.18s ease,
@@ -118,7 +120,7 @@
 
 /* show pink full-width line when hovered/open */
 .faq-card:hover .faq-question-style::after,
-.faq-card.open .faq-question-style::after, 
+.faq-card.open .faq-question-style::after,
 .faq-card:hover .faq-open-question::after,
 .faq-card.open .faq-open-question::after {
   background: linear-gradient(90deg, var(--accent-3), var(--accent-2));
@@ -128,7 +130,7 @@
 
 /* Answer */
 .faq-answer-style {
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Roboto;
   font-weight: 400;
   font-style: Regular;
@@ -147,8 +149,8 @@
 @media (max-width: 900px) {
   .faq-grid {
     grid-template-columns: 1fr;
-    gap: 22px;
-    padding: 36px 20px;
+    gap: 2.8rem;
+    margin-top: 4.6rem;
   }
 
   .faq-answer-style {
@@ -160,6 +162,16 @@
   .faq-card.open .faq-answer-style {
     max-height: 400px; /* enough for typical answers */
     opacity: 1;
+  }
+  .faq_subtitle {
+    margin: 0.3rem 0 28px 0;
+    font-family: Montserrat;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 3%;
+  }
+  .faq_title {
+    font-size: 52px;
   }
 }
 

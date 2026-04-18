@@ -14,13 +14,16 @@ import {
   CoursesSection
 } from '@/components';
 import { useWidth78 } from '@/hooks/useWidth78';
+import { useIsDesktop } from '@/hooks/useIsDesktop';
 
 export default function Page() {
   const [progress, setProgress] = useState<number>(0);
   const [showTop, setShowTop] = useState<boolean>(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
-  const [activeCategory, setActiveCategory] = useState<string>('Tecnologia');
+  const [activeCategory, setActiveCategory] = useState<string | null>('Tecnologia');
 
+
+  const isLongDesktop = useIsDesktop(1900);
   const width78Porcent = useWidth78();
 
   function onScroll() {
@@ -38,8 +41,8 @@ export default function Page() {
     return () => window.removeEventListener('scroll', onScroll)
   }, []);
 
-  function toggleCategory(cat: string) {
-    setActiveCategory((prev) => (prev === cat ? '' : cat));
+  function toggleCategory(cat: string | null) {
+    setActiveCategory((prev) => (prev === cat ? null : cat));
   }
 
   return (
@@ -47,7 +50,7 @@ export default function Page() {
       <Header progress={progress} />
       <main>
         <HeroApresentationSection />
-        <HeroImageBoxSection width78Porcent={width78Porcent}/>
+        <HeroImageBoxSection width78Porcent={width78Porcent} />
         <div className="section-divider" />
         <WaterScrollAnimation />
         <CoursesSection activeCategory={activeCategory} toggleCategory={toggleCategory} />
@@ -57,7 +60,7 @@ export default function Page() {
       <Footer />
       {showTop && (
         <Link to="home" smooth offset={-80} duration={800} className="back-top link-scrool-page" style={{ background: 'var(--accent-3)' }}>
-          <ArrowUp size={24} color="#fff" />
+          <ArrowUp size={isLongDesktop ? 76: 24} color="#fff" />
         </Link>
       )}
     </>

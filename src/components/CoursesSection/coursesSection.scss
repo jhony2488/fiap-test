@@ -120,6 +120,7 @@
 .course-list {
   border-top: 1px solid rgba(255, 255, 255, 0.04);
   padding-top: 2.6rem;
+  padding-left: 0;
 }
 .course-item {
   display: flex;
@@ -178,13 +179,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 8px;
+  padding: 12px 8px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.02);
 }
 .cat-name-mobile {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--fg);
+  color: #ffffff;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -3%;
+  text-transform: uppercase;
 }
 
 /* circular toggle */
@@ -210,6 +215,84 @@
   border-color: rgba(255, 44, 127, 0.9);
 }
 
+/* Collapsible mobile block (one per category) */
+.mobile-category-block {
+  width: 100%;
+}
+
+/* The collapsible area hidden by default */
+.mobile-collapse {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform-origin: top;
+  transition:
+    max-height 360ms cubic-bezier(0.2, 0.9, 0.2, 1),
+    opacity 220ms ease;
+  margin-bottom: 1.2rem;
+  padding-left: 0.5rem;
+}
+
+/* When open, allow content to show.
+   max-height must be big enough to contain the longest content; 1000px is safe for most lists.
+   Alternatively use content measurement in JS for perfect height, but max-height trick is simpler.
+*/
+.mobile-collapse.open {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+/* smaller heading style inside collapsible on mobile */
+.mobile-heading {
+  font-size: 28px;
+  margin: 12px 0;
+}
+
+/* mobile-specific list spacing override */
+.mobile-list {
+  padding: 0;
+  margin-top: -3rem;
+}
+.mobile-list .course-item {
+  border-bottom: 1px solid #8a959b;
+  height: auto;
+}
+
+/* Mobile collapsible */
+.mobile-category-block {
+  width: 100%;
+}
+
+.mobile-collapse {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform-origin: top;
+  transition:
+    max-height 360ms cubic-bezier(0.2, 0.9, 0.2, 1),
+    opacity 220ms ease;
+  margin-bottom: 1.2rem;
+  padding-left: 0.5rem;
+}
+
+.mobile-collapse.open {
+  max-height: 1000px; /* valor seguro; se preferir medição dinâmica, eu implemento */
+  opacity: 1;
+}
+
+/* small mobile heading */
+.mobile-heading {
+  font-size: 28px;
+  margin: 12px 0;
+}
+
+/* ensure mobile-only visibility is controlled by your other media queries */
+@media (min-width: 901px) {
+  .mobile-collapse {
+    display: none;
+  }
+}
+
 @media (min-width: 1580px) {
   .cursos-head,
   .courses-grid {
@@ -219,28 +302,93 @@
 
 /* responsive rules */
 @media (max-width: 900px) {
+  .section-cursos{
+    margin-top: 6rem;
+     margin-bottom: 4rem;
+  }
   .cursos-title {
     font-size: 36px;
   }
-  .cat-controls.desktop {
+  .cat-controls.desktop,
+  .category-heading {
     display: none;
   }
 
   .courses-grid {
     grid-template-columns: 1fr;
+    margin-top: -1.5rem;
   }
 
   .right-col.mobile {
     display: block;
     margin-top: 28px;
   }
+  .desktop-left-col {
+    display: none;
+  }
 
   .course-meta-title {
     min-width: 0;
     display: flex;
-    gap: 4px;
+    gap: 0px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .course-item {
+    gap: 8px;
+    height: 3rem;
   }
   .course-action {
     text-align: left;
+  }
+  .course-title {
+    font-size: 18px;
+    margin: 0;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 19px;
+    letter-spacing: 0%;
+    margin-top: 0.3rem;
+  }
+  .course-meta {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    color: #8a959b;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+  .course-list {
+    padding-top: 2rem;
+  }
+  .course-item {
+    padding-bottom: 1.2rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .cursos-title {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 62px;
+    line-height: 60px;
+    letter-spacing: 0%;
+  }
+  .cursos-subtitle {
+    color: var(--accent-3);
+    margin-top: 6px;
+  }
+  .courses-grid {
+    max-width: 90vw;
+  }
+  .cursos-head {
+    max-width: 90vw;
   }
 }

@@ -66,3 +66,12 @@ button {
   transform: scale(1.2) !important;
   transition: transform 1s ease-in-out;
 }
+
+@media (min-width: 1900px) {
+  .back-top {
+    width: 160px;
+    height: 160px;
+    bottom: 5%;
+    right: 3%;
+  }
+}

@@ -19,7 +19,7 @@ export function middleware(request: NextRequest) {
     const accessCount = Number(request.cookies.get('access_sentinel')?.value || 0);
     const response = NextResponse.next();
 
-    if (accessCount >= 5) {
+    if (accessCount >= 20) {
       // 3. SE excedeu o limite, selamos o destino dele com um HttpOnly de 24h
       response.cookies.set({
         name: 'blk_status',
