@@ -11,10 +11,7 @@
         position: sticky;
         top: 50%;
 
-        // Centraliza o canvas horizontalmente
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
 
         // Respeita seus 78% de largura que calculamos antes
         width: $width-here;

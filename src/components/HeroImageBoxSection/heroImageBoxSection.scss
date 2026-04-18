@@ -61,16 +61,14 @@
       width: 100%;
 
       .marquee-content {
-        display: flex;
-        align-items: center;
+        @include flex-center-align;
         width: max-content;
         will-change: transform;
         animation: slide-left 35s linear infinite;
       }
 
       p {
-        display: flex;
-        align-items: center;
+        @include flex-center-align;
         gap: 40px; // Espaço entre as palavras e as elipses
         margin: 0;
         padding-right: 40px; // Espaço para separar o fim do bloco do início do próximo

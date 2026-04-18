@@ -1,9 +1,7 @@
 .hero-wrap {
   position: relative;
   overflow: hidden;
-  display: flex;
-  justify-items: center;
-  align-items: center;
+  @include flex-center;
   height: 100vh;
   width: 100vw;
   background: var(--bg);
@@ -16,9 +14,8 @@
 .hero-inner {
   margin: 0 auto;
   padding: 0 20px;
-  display: flex;
+  @include flex-center-align;
   gap: 48px;
-  align-items: center;
   position: relative;
   z-index: 3;
 }

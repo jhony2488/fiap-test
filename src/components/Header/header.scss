@@ -10,10 +10,9 @@
     max-width: 1180px;
     margin: 0 auto;
     padding: 14px 20px;
-    display: flex;
-    align-items: center;
+    @include flex-center;
     gap: 12px;
-    justify-content: center;
+  
   }
   &-progress-bar {
     height: 4px;
