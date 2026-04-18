@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.scss";
 import { Suspense } from "react";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -33,9 +34,9 @@ export const metadata: Metadata = {
 
   // Icons / PWA
   icons: {
-    icon: [{ url: "/svgs/logo-fiap.svg", type: "image/svg+xml" }],
-    shortcut: "/svgs/logo-fiap.svg",
-    apple: "/svgs/logo-fiap.svg",
+    icon: [{ url: "/favicon.png", type: "image/png" }],
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   manifest: "/manifest.json",
   appleWebApp: {
@@ -67,7 +68,7 @@ export const metadata: Metadata = {
     siteName: "FIAP",
     images: [
       {
-        url: "/imgs/fiap-og.png",
+        url: "/favicon.png",
         width: 1200,
         height: 630,
         alt: "FIAP — Cursos e Imersões em Tecnologia",
@@ -86,7 +87,7 @@ export const metadata: Metadata = {
       "Cursos de curta duração e imersões em tecnologia, inovação e negócios. Aprenda com a melhor faculdade de tecnologia do Brasil.",
     site: "@FIAP",
     creator: "@FIAP",
-    images: ["/svgs/logo-fiap.svg"],
+    images: ["/favicon.png"],
   },
 
   // Canonical
@@ -99,24 +100,34 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
-    themeColor: '#000',
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1
+  themeColor: '#000',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1
 }
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-    return (
-        <html lang="pt-BR">
-            <body className="antialiased">
-                <Suspense fallback={<div>Carregando...</div>}>
-                    {children}
-                </Suspense>
-            </body>
-        </html>
-    );
+  return (
+    <html lang="pt-BR">
+      <head>
+        {/* Polyfill.io - carregado antes da hidratação */}
+        <Script
+          src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default,Promise,fetch,Array.prototype.includes,Array.prototype.find,Array.from,Object.assign,URL,URLSearchParams,Element.prototype.closest,IntersectionObserver,ResizeObserver"
+          strategy="beforeInteractive"
+          onError={() => {
+            console.warn('polyfill.io falhou — carregue fallback local se necessário');
+          }}
+        />
+      </head>
+      <body className="antialiased">
+        <Suspense fallback={<div>Carregando...</div>}>
+          {children}
+        </Suspense>
+      </body>
+    </html>
+  );
 }
