@@ -1,4 +1,3 @@
-/* container */
 .section-cursos {
   padding: 80px 0px;
   background: var(--bg);
@@ -7,7 +6,6 @@
   margin-top: 7rem;
 }
 
-/* header */
 .cursos-head {
   max-width: 85vw;
   margin: 0 auto 40px;
@@ -38,7 +36,6 @@
   vertical-align: middle;
 }
 
-/* Desktop category pills (top-right) */
 .cat-controls.desktop {
   margin-left: auto;
   display: flex;
@@ -90,7 +87,6 @@
   opacity: 1;
 }
 
-/* main grid */
 .courses-grid {
   max-width: 85vw;
   margin: 0 auto;
@@ -101,7 +97,6 @@
   margin-top: 6rem;
 }
 
-/* left column */
 .left-col {
   min-width: 0;
 }
@@ -116,7 +111,6 @@
   text-transform: capitalize;
 }
 
-/* course list */
 .course-list {
   border-top: 1px solid rgba(255, 255, 255, 0.04);
   padding-top: 2.6rem;
@@ -129,6 +123,10 @@
   padding: 0 0;
   height: 4rem;
   border-bottom: 1px solid #8a959b;
+}
+
+.course-item:hover {
+  border-bottom: 1px solid var(--accent-3);
 }
 .course-meta-title {
   min-width: 260px;
@@ -156,6 +154,9 @@
   line-height: 30px;
   vertical-align: middle;
 }
+.course-title:hover {
+  color: var(--accent-3);
+}
 .course-line {
   flex: 1;
   height: 1px;
@@ -169,12 +170,10 @@
   text-align: right;
 }
 
-/* right column (mobile category controls) */
 .right-col.mobile {
-  display: none; /* shown only on small screens */
+  display: none;
 }
 
-/* mobile vertical category rows (inside right-col on mobile) */
 .cat-row-mobile {
   display: flex;
   align-items: center;
@@ -192,7 +191,6 @@
   text-transform: uppercase;
 }
 
-/* circular toggle */
 .cat-toggle {
   width: 56px;
   height: 56px;
@@ -215,12 +213,10 @@
   border-color: rgba(255, 44, 127, 0.9);
 }
 
-/* Collapsible mobile block (one per category) */
 .mobile-category-block {
   width: 100%;
 }
 
-/* The collapsible area hidden by default */
 .mobile-collapse {
   max-height: 0;
   overflow: hidden;
@@ -233,22 +229,16 @@
   padding-left: 0.5rem;
 }
 
-/* When open, allow content to show.
-   max-height must be big enough to contain the longest content; 1000px is safe for most lists.
-   Alternatively use content measurement in JS for perfect height, but max-height trick is simpler.
-*/
 .mobile-collapse.open {
   max-height: 1000px;
   opacity: 1;
 }
 
-/* smaller heading style inside collapsible on mobile */
 .mobile-heading {
   font-size: 28px;
   margin: 12px 0;
 }
 
-/* mobile-specific list spacing override */
 .mobile-list {
   padding: 0;
   margin-top: -3rem;
@@ -258,7 +248,6 @@
   height: auto;
 }
 
-/* Mobile collapsible */
 .mobile-category-block {
   width: 100%;
 }
@@ -276,17 +265,40 @@
 }
 
 .mobile-collapse.open {
-  max-height: 1000px; /* valor seguro; se preferir medição dinâmica, eu implemento */
+  max-height: 1000px;
   opacity: 1;
 }
 
-/* small mobile heading */
 .mobile-heading {
   font-size: 28px;
   margin: 12px 0;
 }
 
-/* ensure mobile-only visibility is controlled by your other media queries */
+.course-item .course-title,
+.course-item .course-meta,
+.course-item .course-action,
+.course-item .course-line {
+  transition: color 180ms ease, background 180ms ease;
+}
+
+.course-item:hover .course-title,
+.course-item:focus-within .course-title,
+.course-item:hover .course-meta,
+.course-item:focus-within .course-meta,
+.course-item:hover .course-action,
+.course-item:focus-within .course-action {
+  color: var(--accent-3); 
+}
+
+.course-item:hover .course-line,
+.course-item:focus-within .course-line {
+  background: var(--accent-3);
+}
+
+.course-item:hover {
+  border-bottom-color: var(--accent-3);
+}
+
 @media (min-width: 901px) {
   .mobile-collapse {
     display: none;
@@ -299,8 +311,6 @@
     max-width: 71vw;
   }
 }
-
-/* responsive rules */
 @media (max-width: 900px) {
   .section-cursos{
     margin-top: 6rem;
