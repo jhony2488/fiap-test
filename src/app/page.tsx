@@ -15,7 +15,6 @@ import {
 } from '@/components';
 import { useWidth78 } from '@/hooks/useWidth78';
 import { useIsDesktop } from '@/hooks/useIsDesktop';
-import Head from 'next/head';
 import Script from 'next/script';
 
 export default function Page() {
@@ -47,14 +46,7 @@ export default function Page() {
   }
 
   return (
-    <>
-      <Head>
-        {/* Polyfill.io - carregado antes da hidratação */}
-        <Script
-          src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default,Promise,fetch,Array.prototype.includes,Array.prototype.find,Array.from,Object.assign,URL,URLSearchParams,Element.prototype.closest,IntersectionObserver,ResizeObserver"
-          strategy="beforeInteractive"
-        />
-      </Head>
+    <> 
       <Header progress={progress} />
       <main>
         <HeroApresentationSection />
@@ -71,6 +63,10 @@ export default function Page() {
           <ArrowUp size={isLongDesktop ? 76 : 24} color="#fff" />
         </Link>
       )}
+       <Script
+          src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default,Promise,fetch,Array.prototype.includes,Array.prototype.find,Array.from,Object.assign,URL,URLSearchParams,Element.prototype.closest,IntersectionObserver,ResizeObserver"
+          strategy="beforeInteractive"
+        />
     </>
   );
 }

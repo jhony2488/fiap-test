@@ -3,6 +3,7 @@
 import ImageNext from 'next/image';
 import "./header.scss";
 import { useIsDesktop } from '@/hooks/useIsDesktop';
+import Link from 'next/link';
 export function Header({ progress }: { progress: number }) {
     const isDesktop = useIsDesktop();
     const isLongDesktop = useIsDesktop(1900);
@@ -10,15 +11,15 @@ export function Header({ progress }: { progress: number }) {
         <header className="header" role="banner">
             <div className="header-inner">
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                    <a href="/" aria-label="FIAP – página inicial">
+                    <Link href="/" aria-label="FIAP – página inicial">
                         <ImageNext
                             src="/svgs/logo-fiap.svg"
                             alt="FIAP"
                             width={isLongDesktop ? 400 : isDesktop ? 160 : 84}
                             height={isLongDesktop ? 70 : isDesktop ? 36 : 23}
-                            priority 
+                            priority
                         />
-                    </a>
+                    </Link>
                 </div>
             </div>
             <div
