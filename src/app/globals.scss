@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --bg: #{$bg};
+  --fg: #{$fg};
+  --accent: #{$accent};
+  --accent-2: #{$accent-2};
+  --accent-3: #{$accent-3};
+  --accent-4: #{$accent-4};
+  --muted: #{$muted};
+  --card: #{$card};
+  --dark: #{$dark};
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: "liga" 1;
+}
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+/* big divider line between hero and next */
+.section-divider {
+  max-width: 1180px;
+  margin: 36px auto 0;
+  padding: 0 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Back to top */
+.back-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 80;
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-scrool-page {
+  cursor: pointer;
+}
+.link-scrool-page:hover {
+  transform: scale(1.2) !important;
+  transition: transform 1s ease-in-out;
+}

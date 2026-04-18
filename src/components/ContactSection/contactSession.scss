@@ -1,0 +1,22 @@
+
+.link-see-courses {
+  align-items: center;
+  padding: 14px 22px;
+  border-radius: 12;
+  background: var(--accent-3);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.link-see-courses:hover {
+  transition: background-color 1s ease-in-out;
+  background-color: var(--accent-4);
+}
+.link-see-courses-description {
+  margin-top: -0.9rem;
+  margin-bottom: 3rem;
+  color: var(--muted);
+}

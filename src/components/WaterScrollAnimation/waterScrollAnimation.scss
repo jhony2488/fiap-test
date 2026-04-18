@@ -1,0 +1,41 @@
+.water-animation-section {
+    $width-here: 100vw;
+    $height-here: calc(#{$width-here} * 0.5625);
+    position: relative;
+    width: $width-here;
+    overflow: hidden;
+    min-height: $height-here;
+
+    .water-canvas-container {
+        // "Trava" o canvas no meio da tela
+        position: sticky;
+        top: 50%;
+
+        // Centraliza o canvas horizontalmente
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // Respeita seus 78% de largura que calculamos antes
+        width: $width-here;
+        height: $height-here;
+
+        // Proporção 16:9 para o container
+        aspect-ratio: 16 / 9;
+        background: #000;
+        border-radius: 8px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .water-loading {
+        position: absolute;
+        color: #fff;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .water-animation-section {
+        display: none;
+    }
+}

@@ -1,0 +1,75 @@
+.hero-wrap {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: var(--bg);
+  background-image: url("/imgs/sobre.png");
+  background-position: center center; // Horizontal e Vertical
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.hero-inner {
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+.hero-content {
+  flex: 1;
+  position: relative;
+  z-index: 4;
+}
+.hero-title {
+  font-weight: 400;
+  font-size: 7.5rem;
+  line-height: 8.75rem;
+
+  span:nth-child(1) {
+    margin-left: 6rem;
+    animation:
+      typing 2s steps(18) forwards,
+      cursor-white 0.5s step-end 4; // Pisca por 2s e para
+  }
+  span {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    border-right: 4px solid transparent;
+    animation-fill-mode: forwards;
+  }
+
+  // SEGUNDO SPAN (O Segredo está aqui)
+  span:nth-child(3) {
+    // nth-child(3) por causa do <br/>
+    visibility: hidden; // Totalmente oculto (espaço e cursor)
+    animation:
+      typing 1.5s steps(13) 2s forwards,
+      cursor-white 0.5s step-end 2.2 2s,
+      show-second 0.01s forwards 2s; // Torna visível exatamente aos 2s
+    margin-top: -2rem;
+  }
+}
+
+@media (max-width: 1580px) {
+  .hero-title {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+    gap: 28px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
