@@ -1,3 +1,4 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Footer renders footer content and matches snapshot 1`] = `
 <DocumentFragment>

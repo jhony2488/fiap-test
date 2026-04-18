@@ -1,3 +1,4 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`FaqSection renders FAQ and toggles items when clicked 1`] = `
 <DocumentFragment>
