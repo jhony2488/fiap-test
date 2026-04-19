@@ -39,20 +39,20 @@ button {
 }
 
 .section-divider {
-  max-width: 1180px;
-  margin: 36px auto 0;
-  padding: 0 20px;
+  max-width: 73.75rem;
+  margin: 2.25rem auto 0;
+  padding: 0 1.25rem;
   border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .back-top {
   position: fixed;
-  bottom: 28px;
-  right: 28px;
+  bottom: 1.75rem;
+  right: 1.75rem;
   z-index: 80;
-  width: 56px;
-  height: 56px;
-  border-radius: 999px;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 62.438rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -67,10 +67,10 @@ button {
   transition: transform 1s ease-in-out;
 }
 
-@media (min-width: 1900px) {
+@media (min-width: 118.75rem) {
   .back-top {
-    width: 160px;
-    height: 160px;
+    width: 10rem;
+    height: 10rem;
     bottom: 5%;
     right: 3%;
   }

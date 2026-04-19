@@ -31,7 +31,7 @@
   }
   100% {
     opacity: 0;
-    transform: scale(0.9) translateY(-100px);
+    transform: scale(0.9) translateY(-6.25rem);
   }
 }
 
@@ -45,8 +45,8 @@
 }
 
 @keyframes fade-in-out {
-  0% { opacity: 0; transform: translateY(10px); }    
+  0% { opacity: 0; transform: translateY(0.625rem); }    
   15% { opacity: 1; transform: translateY(0); }  
   85% { opacity: 1; transform: translateY(0); }    
-  100% { opacity: 0; transform: translateY(-10px); } 
+  100% { opacity: 0; transform: translateY(-0.625rem); } 
 }

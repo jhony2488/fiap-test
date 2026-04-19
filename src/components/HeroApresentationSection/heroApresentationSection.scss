@@ -13,9 +13,9 @@
 }
 .hero-inner {
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25rem;
   @include flex-center-align;
-  gap: 48px;
+  gap: 3rem;
   position: relative;
   z-index: 3;
 }
@@ -39,7 +39,7 @@
     overflow: hidden;
     white-space: nowrap;
     width: 0;
-    border-right: 4px solid transparent;
+    border-right: 0.25rem solid transparent;
     animation-fill-mode: forwards;
   }
   span:nth-child(3) {
@@ -52,13 +52,13 @@
   }
 }
 
-@media (max-width: 1580px) {
+@media (max-width: 98.75rem) {
   .hero-title {
     font-size: 7rem;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
   span:nth-child(1) {
     margin-left: 2rem;
     animation:
@@ -67,7 +67,7 @@
   }
 
   span {
-    border-right: 3px solid transparent;
+    border-right: 0.188rem solid transparent;
   }
 
   span:nth-child(3) {
@@ -80,7 +80,7 @@
   }
 }
 
-@media (max-width: 900px) and (min-width: 680px) {
+@media (max-width: 56.25rem) and (min-width: 42.5rem) {
   .hero-title {
     font-size: 3rem;
     span:nth-child(1) {
@@ -96,7 +96,7 @@
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 42.5rem) {
   .hero-wrap {
     min-width: 100vw;
     max-height: 100vh;
@@ -106,7 +106,7 @@
   .hero-title {
     font-weight: 400;
     font-style: Regular;
-    font-size: 30px;
+    font-size: 1.875rem;
     line-height: 120%;
     letter-spacing: 0%;
     vertical-align: middle;

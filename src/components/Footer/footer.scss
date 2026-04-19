@@ -1,15 +1,15 @@
 .site-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.04);
-  padding: 48px 20px;
+  padding: 3rem 1.25rem;
   background: var(--card);
   color: var(--muted);
   padding-bottom: 2rem;
   &_wrapper {
-    max-width: 1180px;
+    max-width: 73.75rem;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 28px;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    gap: 1.75rem;
     &-title{
        color: var(--accent); 
        font-weight: 700; 
@@ -19,7 +19,7 @@
     }
     &-container-social-midia {
         display: flex;
-        gap: 12px;
+        gap: 0.75rem;
         a:hover{
           transform: scale(1.2);
           transition: transform 1s ease-in-out;
@@ -28,7 +28,7 @@
   }
   .copyright {
     text-align: center;
-    margin-top: 28px;
+    margin-top: 1.75rem;
     color: var(--muted);
   }
 }
