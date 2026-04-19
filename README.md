@@ -6,7 +6,7 @@ Uma aplicação Next.js moderna com TypeScript e Tailwind CSS.
 
 - **Next.js 15** - Framework React para produção
 - **TypeScript** - Tipagem estática
-- **SASS** - Framework CSS utilitário
+- **SASS** - Syntactically Awesome Style Sheets
 - **React 19** - Biblioteca UI
 
 # Como rodar o projeto (Next.js) e o Storybook — guia rápido
