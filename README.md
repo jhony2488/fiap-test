@@ -30,7 +30,6 @@ node -v
 npm -v
 ## 🛠️ Instalação
 
-```bash
 # Instalar dependências
 npm install
 
