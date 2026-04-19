@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import { ArrowUp } from 'lucide-react';
 import {
-  WaterScrollAnimation,
   Footer,
   Header,
   ContactSection,
@@ -15,6 +14,16 @@ import {
 } from '@/components';
 import { useWidth78 } from '@/hooks/useWidth78';
 import { useIsDesktop } from '@/hooks/useIsDesktop';
+import dynamic from 'next/dynamic';
+
+const WaterScrollAnimation = dynamic(
+  () =>
+    import('@/components/WaterScrollAnimation').then((mod) => mod.WaterScrollAnimation),
+  {
+    ssr: false, 
+    loading: () => <div aria-hidden className="w-full h-24" />,
+  }
+);
 
 export default function Page() {
   const [progress, setProgress] = useState<number>(0);
@@ -45,7 +54,7 @@ export default function Page() {
   }
 
   return (
-    <> 
+    <>
       <Header progress={progress} />
       <main>
         <HeroApresentationSection />
