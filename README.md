@@ -49,7 +49,3 @@ npm run storybook
 ## 🌐 Acessar
 
 Abra [http://localhost:3000](http://localhost:3000) no navegador.
-
-## 📚 Documentação
-
-Consulte a pasta `docs/` para documentação detalhada do projeto.
