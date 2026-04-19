@@ -1,6 +1,6 @@
 # FIAP Landing Page
 
-Uma aplicação Next.js moderna com TypeScript e Tailwind CSS.
+Uma aplicação Next.js moderna com TypeScript.
 
 [Video demonstração](https://drive.google.com/file/d/1WfIYGV46aSwRml4i_lcNk-oH10RKoWFB/view?usp=sharing)
 
