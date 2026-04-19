@@ -63,13 +63,12 @@
     ]
   },
   "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not op_mini all",
-    "last 2 versions",
-    "Firefox ESR",
-    "Edge >= 18",
-    "Safari >= 12",
-    "iOS >= 12"
+    "Chrome >= 100",
+    "Firefox >= 100",
+    "Safari >= 15",
+    "Edge >= 100",
+    "Opera >= 86",
+    "ios_saf >= 15",
+    "not IE 11"
   ]
 }
