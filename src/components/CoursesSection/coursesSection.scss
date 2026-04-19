@@ -109,12 +109,54 @@
   line-height: 100%;
   letter-spacing: 0%;
   text-transform: capitalize;
+  transition: opacity $course-animation-duration-in $course-animation-ease, transform $course-animation-duration-in $course-animation-ease;
+  opacity: 1;
+}
+
+.category-heading.leaving {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition-duration: $course-animation-duration-out;
+}
+
+.category-heading.entering {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.category-heading.entering.entered {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .course-list {
   border-top: 1px solid rgba(255, 255, 255, 0.04);
   padding-top: 2.6rem;
   padding-left: 0;
+   opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity $course-animation-duration-in $course-animation-ease,
+    transform $course-animation-duration-in $course-animation-ease;
+  will-change: opacity, transform;
+}
+
+.course-list.leaving {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition-duration: $course-animation-duration-out;
+}
+
+/* Quando a lista está entrando (fade in / slide up -> 0) */
+.course-list.entering {
+  opacity: 0;
+  transform: translateY(8px);
+  /* animar para estado padrão (opacity:1 / translateY:0) */
+  &.entered {
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: $course-animation-duration-in;
+  }
 }
 .course-item {
   display: flex;
@@ -222,9 +264,10 @@
   overflow: hidden;
   opacity: 0;
   transform-origin: top;
-  transition:
-    max-height 360ms cubic-bezier(0.2, 0.9, 0.2, 1),
-    opacity 220ms ease;
+   transition:
+    max-height 360ms $course-animation-ease,
+    opacity 220ms ease,
+    transform 260ms $course-animation-ease;
   margin-bottom: 1.2rem;
   padding-left: 0.5rem;
 }
@@ -232,6 +275,7 @@
 .mobile-collapse.open {
   max-height: 1000px;
   opacity: 1;
+    transform: translateY(0);
 }
 
 .mobile-heading {

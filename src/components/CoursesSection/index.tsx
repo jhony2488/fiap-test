@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import { cursos } from "@/utils/consts";
 import "./coursesSection.scss";
 import Script from "next/script";
@@ -12,8 +12,60 @@ export function CoursesSection({ activeCategory = null, toggleCategory }: PropsC
   const group = useMemo(() => cursos.find((c) => c.category === displayCategory) ?? cursos[0], [displayCategory]);
 
   const [openSet, setOpenSet] = useState<Set<string>>(new Set());
+  const isDesktop = useIsDesktop();
 
-  const isDesktop = useIsDesktop(); 
+  // ANIMAÇÃO: manter um "currentGroup" local para permitir animar saída -> troca -> entrada
+  const [currentGroup, setCurrentGroup] = useState(group);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [isEntering, setIsEntering] = useState(false);
+  const timeouts = useRef<number[]>([]);
+
+  useEffect(() => {
+    // inicializa currentGroup ao montar
+    setCurrentGroup(group);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    // quando a categoria atual (group) muda, animar saída -> trocar -> entrar
+    if (!currentGroup || group.category === currentGroup.category) {
+      return;
+    }
+    // caso raro: já diferente
+    // clean previous timers
+    timeouts.current.forEach((t) => clearTimeout(t));
+    timeouts.current = [];
+
+    // start leaving
+    setIsAnimating(true); // indicates we are in a transition (leaving -> entering)
+    // leaving duration (match SCSS $course-animation-duration-out = 180ms)
+    const leaveTimeout = window.setTimeout(() => {
+      // update group (swap content while invisible)
+      setCurrentGroup(group);
+      // mark entering: small tick before finishing
+      setIsEntering(true);
+      // entering duration (match SCSS $course-animation-duration-in = 220ms)
+      const enterTimeout = window.setTimeout(() => {
+        // finish animation
+        setIsAnimating(false);
+        setIsEntering(false);
+      }, 220);
+      timeouts.current.push(enterTimeout);
+    }, 180);
+    timeouts.current.push(leaveTimeout);
+
+    return () => {
+      timeouts.current.forEach((t) => clearTimeout(t));
+      timeouts.current = [];
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [group]);
+
+  useEffect(() => {
+    if (isDesktop && activeCategory === null) {
+      toggleCategory?.(cursos[0].category);
+    }
+  }, [activeCategory, isDesktop, toggleCategory]);
 
   function handleMobileToggle(cat: string) {
     setOpenSet((prev) => {
@@ -55,12 +107,6 @@ export function CoursesSection({ activeCategory = null, toggleCategory }: PropsC
     ),
   };
 
-  useEffect(() => {
-    if (isDesktop && activeCategory === null) {
-      toggleCategory?.(cursos[0].category);
-    }
-  }, [activeCategory, isDesktop, toggleCategory]);
-
   return (
     <section id="cursos" className="section-cursos" aria-labelledby="cursos-heading">
       <Script id="courses-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(coursesSchema) }} />
@@ -92,10 +138,21 @@ export function CoursesSection({ activeCategory = null, toggleCategory }: PropsC
 
       <div className="courses-grid">
         <div className="left-col desktop-left-col" aria-hidden={false}>
-          <h3 className="category-heading" aria-live="polite" aria-atomic="true">{group.category}</h3>
+          {/* Categoria heading com classes de animação */}
+          <h3
+            className={`category-heading ${isAnimating ? "leaving" : isEntering ? "entering entered" : ""}`}
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            {currentGroup.category}
+          </h3>
 
-          <ul className="course-list" role="list">
-            {group.items.map((it, idx) => (
+          {/* Lista com classes que controlam a animação */}
+          <ul
+            className={`course-list ${isAnimating ? "leaving" : isEntering ? "entering entered" : ""}`}
+            role="list"
+          >
+            {currentGroup.items.map((it, idx) => (
               <li className="course-item" key={idx}>
                 <div className="course-meta-title">
                   <h4 className="course-title">{it.title}</h4>

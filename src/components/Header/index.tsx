@@ -8,7 +8,7 @@ export function Header({ progress }: { progress: number }) {
     const isDesktop = useIsDesktop();
     const isLongDesktop = useIsDesktop(1900);
     return (
-        <header className="header" role="banner">
+        <header className={progress > 0 ? 'header header--scrolled' : 'header'} role="banner">
             <div className="header-inner">
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                     <Link href="/" aria-label="FIAP – página inicial">

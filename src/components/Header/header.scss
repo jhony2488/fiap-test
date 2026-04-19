@@ -6,6 +6,11 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(6px);
 
+  &--scrolled {
+    background: #202121;
+    transition: background 1s ease-in-out;
+  }
+
   &-inner {
     max-width: 1180px;
     margin: 0 auto;
