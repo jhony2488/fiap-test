@@ -48,4 +48,4 @@ npm run storybook
 
 ## 🌐 Acessar
 
-Abra [http://localhost:3000](http://localhost:3000) no navegador.
+Abra [http://localhost:3000](http://localhost:3000) no navegador ou acesse a aplicação em produção [fiap-landing-page.netlify.app](fiap-landing-page.netlify.app).
