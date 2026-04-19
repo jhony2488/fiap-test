@@ -2,9 +2,10 @@ import type { NextConfig } from "next";
 
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
- sassOptions: {
+  sassOptions: {
     additionalData: `@import "src/styles/variables.scss"; @import "src/styles/animations.scss";  @import "src/styles/mixins.scss";`,
   },
+  swcMinify: true,
 };
 
 export default nextConfig;
