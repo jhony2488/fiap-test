@@ -2,6 +2,8 @@
 
 Uma aplicação Next.js moderna com TypeScript e Tailwind CSS.
 
+[Video demonstração](https://drive.google.com/file/d/1WfIYGV46aSwRml4i_lcNk-oH10RKoWFB/view?usp=sharing)
+
 ## 🚀 Tecnologias
 
 - **Next.js 15** - Framework React para produção
@@ -48,4 +50,4 @@ npm run storybook
 
 ## 🌐 Acessar
 
-Abra [http://localhost:3000](http://localhost:3000) no navegador ou acesse a aplicação em produção [ http://fiap-landing-page.netlify.app]( http://fiap-landing-page.netlify.app).
+Abra [http://localhost:3000](http://localhost:3000) no navegador ou acesse a aplicação em produção [http://fiap-landing-page.netlify.app](http://fiap-landing-page.netlify.app).
