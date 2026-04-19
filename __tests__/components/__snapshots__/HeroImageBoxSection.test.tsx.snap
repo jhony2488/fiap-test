@@ -62,7 +62,7 @@ exports[`HeroImageBoxSection renders with provided width78Porcent prop and match
           alt="Estudantes da FIAP em ambiente de aprendizado em tecnologia"
           data-next-image-mock="true"
           height="648"
-          src="/imgs/intro.png"
+          src="/imgs/intro.webp"
           width="1200"
         />
       </div>

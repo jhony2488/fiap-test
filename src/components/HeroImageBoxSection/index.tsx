@@ -66,7 +66,7 @@ export function HeroImageBoxSection({ width78Porcent }:  PropsHeroImageBoxSectio
             <div ref={containerRef} className='hero-image-box_image' aria-hidden={false}>
                 <div className={`reveal-mask ${visibleImageApresentation ? 'visible' : ''}`}>
                     <ImageNext 
-                    src="/imgs/intro.png"   
+                    src="/imgs/intro.webp"   
                     alt="Estudantes da FIAP em ambiente de aprendizado em tecnologia" 
                     width={width78Porcent} height={width78Porcent * 0.54} 
                     loading="lazy" 
