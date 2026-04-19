@@ -1,6 +1,6 @@
 export const TOTAL_FRAMES = 191; 
 export const BASE_PATH = '/imgs/water/water_'; 
-export const FILE_EXT = '.jpg';
+export const FILE_EXT = '.webp';
 
 export const cursos = [
     {
